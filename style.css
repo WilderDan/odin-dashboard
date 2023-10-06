@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 6fr;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: red;
+}
+
+header {
+  grid-area: header;
+  background-color: green;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: blue;
+}
+
+.announcements {
+  grid-area: announcements;
+  background-color: orange;
+}
+
+.trending {
+  grid-area: trending;
+  background-color: yellow;
+}
