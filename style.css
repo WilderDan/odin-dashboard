@@ -26,8 +26,8 @@ body {
   grid-template-areas:
     "sidebar header"
     "sidebar main";
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 6fr;
+  grid-template-columns: minmax(min-content, 200px) 1fr;
+  grid-template-rows: minmax(min-content, 100px) 1fr;
 }
 
 .sidebar {
@@ -60,10 +60,12 @@ header {
   grid-area: search;
   justify-self: flex-start;
   width: 100%;
+  display: grid;
 }
 
 .search input {
-  width: 100%;
+  width: min(500px, 100%);
+  justify-self: flex-start;
 }
 
 .userInfo {
@@ -93,27 +95,27 @@ main {
     "projects trending";
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
+  background-color: gray;
+  padding: var(--sectionPadding);
 }
 
 .projects {
   grid-area: projects;
-  background-color: blue;
 }
 
 .announcements {
   grid-area: announcements;
-  background-color: orange;
   padding: calc(var(--sectionPadding) / 2);
 }
 
 .trending {
   grid-area: trending;
-  background-color: yellow;
   padding: calc(var(--sectionPadding) / 2);
 }
 
 .announcements h1,
-.trending h1 {
+.trending h1,
+.projects h1 {
   text-align: left;
   margin: 1rem 0;
 }
