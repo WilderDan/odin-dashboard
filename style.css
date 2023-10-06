@@ -97,6 +97,7 @@ main {
   grid-template-rows: 1fr 1fr;
   background-color: gray;
   padding: var(--sectionPadding);
+  gap: calc(var(--gridGap) / 2);
 }
 
 .projects {
@@ -142,4 +143,17 @@ hr {
 
 .userHandle {
   font-weight: bold;
+}
+
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: space-evenly;
+  gap: var(--gridGap);
+}
+
+.projectCard {
+  background-color: white;
+  width: 300px;
+  height: 150px;
 }
