@@ -11,8 +11,8 @@ ol {
 }
 
 :root {
-  --sectionPadding: 10px;
-  --gridGap: 32px;
+  --sectionPadding: 1rem;
+  --gridGap: 2rem;
 }
 
 body {
@@ -43,6 +43,42 @@ body {
 header {
   grid-area: header;
   background-color: green;
+  display: grid;
+  grid-template-areas:
+    "search userInfo"
+    "userGreeting userActions";
+  grid-template-columns: 8fr 5fr;
+  gap: calc(var(--gridGap) / 2);
+  padding: var(--sectionPadding);
+}
+
+.search {
+  grid-area: search;
+  justify-self: flex-start;
+  width: 100%;
+}
+
+.search input {
+  width: 100%;
+}
+
+.userInfo {
+  grid-area: userInfo;
+  justify-self: flex-end;
+}
+
+.userGreeting {
+  grid-area: userGreeting;
+  justify-self: flex-start;
+}
+
+.userActions {
+  grid-area: userActions;
+  display: grid;
+  width: 100%;
+  justify-content: flex-end;
+  grid-template-columns: repeat(auto-fit, 50px);
+  gap: calc(var(--gridGap) / 2);
 }
 
 main {
