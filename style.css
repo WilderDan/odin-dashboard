@@ -10,6 +10,10 @@ ol {
   list-style: none;
 }
 
+h1 {
+  font-size: 1.5rem;
+}
+
 :root {
   --sectionPadding: 1rem;
   --gridGap: 2rem;
@@ -99,9 +103,29 @@ main {
 .announcements {
   grid-area: announcements;
   background-color: orange;
+  padding: calc(var(--sectionPadding) / 2);
 }
 
 .trending {
   grid-area: trending;
   background-color: yellow;
+}
+
+.announcements h1 {
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.announcementCard {
+  background-color: white;
+  padding: 1rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-style: bold;
+}
+
+hr {
+  margin: 1rem 0;
 }
