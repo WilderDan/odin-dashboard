@@ -10,6 +10,21 @@ ol {
   list-style: none;
 }
 
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  font-size: 1.25rem;
+}
+
+a:hover > .sideIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 h1 {
   font-size: 1.5rem;
 }
@@ -17,6 +32,7 @@ h1 {
 :root {
   --sectionPadding: 1rem;
   --gridGap: 2rem;
+  --blue: #1992d4;
 }
 
 body {
@@ -32,7 +48,8 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: red;
+  background-color: var(--blue);
+  color: white;
   display: grid;
   grid-template-rows: repeat(3, min-content);
   gap: var(--gridGap);
@@ -42,6 +59,7 @@ body {
 .sidebar nav ul {
   display: grid;
   gap: calc(var(--gridGap) / 4);
+  font-weight: bold;
 }
 
 header {
@@ -156,4 +174,31 @@ hr {
   background-color: white;
   width: 300px;
   height: 150px;
+}
+
+.iconTextContainer {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+#dashIcon {
+  fill: white;
+}
+
+.sideIcon {
+  height: 1rem;
+  width: 1rem;
+  fill: white;
+}
+
+.sideBarLink {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: min-content;
+  gap: 0.5rem;
+}
+
+.sideBarLink span {
+  text-align: left;
 }
