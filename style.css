@@ -276,7 +276,10 @@ hr {
 }
 
 .projectIcons {
-  text-align: right;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-end;
+  gap: 1rem;
 }
 .projectIcons img {
   height: 1.5rem;
