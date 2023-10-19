@@ -197,8 +197,13 @@ hr {
 
 .projectCard {
   background-color: white;
+  border-radius: var(--borderRadius);
+  border-left: 8px solid #e2d80d;
+  padding: 1rem;
   width: 300px;
-  height: 150px;
+  height: 200px;
+  display: grid;
+  align-items: flex-end;
 }
 
 .iconTextContainer {
@@ -268,4 +273,11 @@ hr {
 
 .trendingItem img {
   height: 48px;
+}
+
+.projectIcons {
+  text-align: right;
+}
+.projectIcons img {
+  height: 1.5rem;
 }
