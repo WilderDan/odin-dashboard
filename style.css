@@ -33,6 +33,8 @@ h1 {
   --sectionPadding: 1rem;
   --gridGap: 2rem;
   --blue: #1992d4;
+  --gray: #e2e8f0;
+  --borderRadius: 25px;
 }
 
 body {
@@ -64,7 +66,6 @@ body {
 
 header {
   grid-area: header;
-  background-color: green;
   display: grid;
   grid-template-areas:
     "search userInfo"
@@ -79,16 +80,35 @@ header {
   justify-self: flex-start;
   width: 100%;
   display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content auto;
+  gap: calc(var(--gridGap) / 2);
+  align-items: center;
 }
 
 .search input {
   width: min(500px, 100%);
   justify-self: flex-start;
+  background-color: var(--gray);
+  border: none;
+  border-radius: var(--borderRadius);
+  height: 50%;
+  padding: 1rem;
 }
 
 .userInfo {
   grid-area: userInfo;
   justify-self: flex-end;
+  font-weight: bold;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: calc(var(--gridGap) / 2);
+}
+
+.userInfo svg {
+  width: 3rem;
+  height: 3rem;
 }
 
 .userGreeting {
@@ -113,7 +133,7 @@ main {
     "projects trending";
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background-color: gray;
+  background-color: var(--gray);
   padding: var(--sectionPadding);
   gap: calc(var(--gridGap) / 2);
 }
@@ -201,4 +221,8 @@ hr {
 
 .sideBarLink span {
   text-align: left;
+}
+
+#notificationIcon {
+  height: 75%;
 }
