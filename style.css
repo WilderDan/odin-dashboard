@@ -202,7 +202,7 @@ hr {
 }
 
 .headerIcon {
-  height: 1.75rem;
+  height: 100%;
 }
 
 .sideIcon {
@@ -211,7 +211,7 @@ hr {
 }
 
 .sideBarLink,
-.logoContainer {
+.imageHeaderContainer {
   display: grid;
   align-items: center;
   grid-auto-flow: column;
@@ -220,10 +220,34 @@ hr {
 }
 
 .sideBarLink span,
-.logoContainer h1 {
+.imageHeaderContainer h1 {
   text-align: left;
 }
 
 #notificationIcon {
   height: 75%;
+}
+
+.userGreeting img {
+  height: 4rem;
+}
+
+.userActions {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: repeat(3, 8ch);
+}
+
+.userActions button {
+  background-color: var(--blue);
+  color: white;
+  border: 0;
+  border-radius: var(--borderRadius);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.userActions button:hover {
+  border: 1px solid black;
 }
