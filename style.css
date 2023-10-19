@@ -106,7 +106,7 @@ header {
   gap: calc(var(--gridGap) / 2);
 }
 
-.userInfo svg {
+.userInfo img {
   width: 3rem;
   height: 3rem;
 }
@@ -201,17 +201,17 @@ hr {
   grid-auto-flow: column;
 }
 
-#dashIcon {
-  fill: white;
+.headerIcon {
+  height: 1.75rem;
 }
 
 .sideIcon {
   height: 1rem;
   width: 1rem;
-  fill: white;
 }
 
-.sideBarLink {
+.sideBarLink,
+.logoContainer {
   display: grid;
   align-items: center;
   grid-auto-flow: column;
@@ -219,7 +219,8 @@ hr {
   gap: 0.5rem;
 }
 
-.sideBarLink span {
+.sideBarLink span,
+.logoContainer h1 {
   text-align: left;
 }
 
