@@ -147,6 +147,11 @@ main {
   padding: calc(var(--sectionPadding) / 2);
 }
 
+.announcementCard,
+.trendingCard {
+  border-radius: var(--borderRadius);
+}
+
 .trending {
   grid-area: trending;
   padding: calc(var(--sectionPadding) / 2);
@@ -250,4 +255,17 @@ hr {
 
 .userActions button:hover {
   border: 1px solid black;
+}
+
+.trendingItem {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+}
+
+.trendingItem img {
+  height: 48px;
 }
